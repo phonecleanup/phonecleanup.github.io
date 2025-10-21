@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="iCleaner - The ultimate phone cleaner app for Android and iOS. Clean junk files, optimize storage, secure your photos with vault, and boost your phone's performance with AI-powered cleanup tools.">
+    <meta name="keywords" content="phone cleaner, iphone cleanup, ai phone cleaner, android cleaner, ios cleaner, storage optimizer, junk file remover, duplicate photo finder, secure vault">
+    <title>iCleaner - AI-Powered Phone Cleaner for Android & iOS | Free Up Space Instantly</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #f5f7fa;
+        }
+
+        .top-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .top-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: drift 20s linear infinite;
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .header-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-title {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        .header-subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            padding: 20px 0;
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .content-section {
+            background: white;
+            margin: 40px auto;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-top: 50px;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            padding: 35px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #2d3748;
+        }
+
+        .feature-desc {
+            font-size: 16px;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            color: white;
+            margin: 40px 0;
+            border-radius: 20px;
+        }
+
+        .stats-title {
+            color: white;
+            text-align: center;
+            margin-bottom: 60px;
+            -webkit-text-fill-color: white;
+            font-size: 36px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 52px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .comparison-section {
+            margin: 60px 0;
+        }
+
+        .comparison-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .comparison-subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            padding: 25px;
+            border-bottom: 1px solid #e2e8f0;
+            align-items: center;
+        }
+
+        .comparison-row:first-child {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .comparison-row:hover:not(:first-child) {
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .checkmark {
+            color: #48bb78;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .crossmark {
+            color: #f56565;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            margin: 40px 0;
+        }
+
+        .highlight h3 {
+            margin-top: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            margin: 60px 0;
+        }
+
+        .cta-title {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .cta-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            background: white;
+            color: #667eea;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background: #1a202c;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #a0aec0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .footer-section a:hover {
+            color: #667eea;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #2d3748;
+            color: #718096;
+        }
+
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 32px;
+            }
+
+            .header-subtitle {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 22px;
+            }
+
+            .content-section {
+                padding: 40px 20px;
+                margin: 20px 10px;
+            }
+
+            .nav-container {
+                gap: 20px;
+            }
+
+            .nav-link {
+                padding: 15px 0;
+                font-size: 14px;
+            }
+
+            .comparison-row {
+                grid-template-columns: 1.5fr 1fr 1fr;
+                font-size: 14px;
+                padding: 15px;
+            }
+
+            .stats-section {
+                padding: 50px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-header">
+        <div class="header-icon">🧹</div>
+        <h1 class="header-title">Welcome to iCleaner</h1>
+        <p class="header-subtitle">Struggling with slow phone performance and storage issues? Don't worry – we've got you covered!</p>
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+            <a href="terms-of-service.html" class="nav-link">Terms & Conditions</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="content-section" id="home">
+            <div class="content-wrapper">
+                <h1>What is iCleaner?</h1>
+                <p>iCleaner is your go-to mobile app for comprehensive phone optimization and storage management. We're an independent mobile application designed to help smartphone users tackle daily performance challenges on both Android and iOS devices. We provide carefully crafted cleaning tools and AI-powered optimization that guide you toward maximum device performance without compromising your data or privacy.</p>
+
+                <h2>Transform Your Phone Experience with iCleaner</h2>
+                <p>In today's digital age, our smartphones have become extensions of ourselves, storing thousands of photos, videos, documents, and apps that accumulate over time. However, this constant digital accumulation comes at a cost: reduced performance, cluttered storage, and compromised privacy. This is where iCleaner steps in as your ultimate phone cleaning companion, offering a comprehensive solution that goes far beyond traditional cleaning apps.</p>
+
+                <p>iCleaner represents a new generation of phone optimization tools, specifically engineered for both Android and iOS devices. Unlike basic cleaner apps that only scratch the surface, iCleaner employs advanced AI algorithms to identify and eliminate junk files, redundant data, and hidden cache that slow down your device. Whether you're struggling with an iPhone that's running out of space or an Android device that's become sluggish over time, iCleaner delivers results that you can see and feel immediately.</p>
+
+                <p>What sets iCleaner apart from countless other phone cleaner applications is its intelligent approach to storage management. The app doesn't just blindly delete files; it analyzes your usage patterns, understands which files are genuinely important, and provides smart recommendations that help you make informed decisions about what to keep and what to remove. This intelligent methodology ensures that you never accidentally delete something valuable while still achieving maximum storage optimization.</p>
+
+                <h2>Comprehensive Features That Redefine Phone Cleaning</h2>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧹</div>
+                        <div class="feature-title">Deep Junk Cleaning</div>
+                        <p class="feature-desc">Remove cache, temp files, and hidden junk that slow down your device and consume valuable storage space.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <div class="feature-title">Secure Vault</div>
+                        <p class="feature-desc">Protect your private photos, videos, and files with military-grade encryption and biometric security.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <div class="feature-title">Contact Cleanup</div>
+                        <p class="feature-desc">Automatically merge duplicates and remove empty contacts to organize your address book perfectly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📸</div>
+                        <div class="feature-title">Media Manager</div>
+                        <p class="feature-desc">Smart photo and video organization with duplicate detection and similarity analysis powered by AI.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📧</div>
+                        <div class="feature-title">Email Cleaner</div>
+                        <p class="feature-desc">Declutter your inbox by removing promotional emails, large attachments, and unnecessary messages.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-title">Compression Tools</div>
+                        <p class="feature-desc">Reduce file sizes without losing quality, perfect for sharing large videos and photos efficiently.</p>
+                    </div>
+                </div>
+
+                <h3>Advanced Junk File Removal and Cache Cleaning</h3>
+                <p>The cornerstone of any effective phone cleaner is its ability to identify and remove junk files, and iCleaner excels in this domain. Every app you use generates temporary files, cache data, and residual information that remains on your device long after you're done using it. Over time, these files accumulate into gigabytes of wasted space. iCleaner's sophisticated scanning engine delves deep into your device's file system, identifying cache files from social media apps, browsing data, app residuals, and temporary files that serve no purpose.</p>
+
+                <p>What makes iCleaner's junk removal exceptional is its precision. The AI-powered phone cleaner distinguishes between essential system files and genuinely unnecessary data, ensuring that your device's stability is never compromised. Many users report recovering anywhere from 2GB to 10GB of storage space after their first comprehensive scan, and that's just the beginning. Regular maintenance with iCleaner keeps your phone running at peak efficiency.</p>
+
+                <h3>Military-Grade Vault for Ultimate Privacy</h3>
+                <p>Privacy has become a paramount concern in our interconnected world. iCleaner addresses this with its robust secure storage vault, a feature that transforms how you protect sensitive information. The vault functionality allows you to store private photos, videos, documents, and files behind multiple layers of security including biometric authentication, PIN codes, and encryption protocols.</p>
+
+                <p>Unlike simple gallery lock apps, iCleaner's vault is integrated seamlessly into the phone cleanup ecosystem. When you identify sensitive files during the cleanup process, you can instantly move them to the secure vault with a single tap. The vault is completely hidden from regular file browsers and gallery apps, ensuring that your private content remains truly private. Whether you're concerned about prying eyes or simply want peace of mind knowing your personal photos and documents are secure, iCleaner's vault provides enterprise-level protection in a user-friendly package.</p>
+
+                <h3>Intelligent Contacts Management</h3>
+                <p>Your contact list likely contains dozens of duplicate entries, incomplete information, and contacts you haven't interacted with in years. iCleaner's contacts cleanup feature brings order to this chaos. The intelligent algorithm scans your entire contact database, identifying duplicate entries even when they're not exact matches. It can merge contacts that represent the same person but have slight variations in names or numbers, remove empty contacts that serve no purpose, and help you organize your contact list efficiently.</p>
+
+                <p>This feature is particularly valuable for professionals who've accumulated contacts from multiple sources over the years. Instead of spending hours manually reviewing and cleaning your contact list, iCleaner handles the tedious work automatically while giving you final approval before any changes are made. The result is a clean, organized contact list that makes communication more efficient.</p>
+
+                <h3>Powerful Media and File Management</h3>
+                <p>Photos and videos are among the largest space consumers on modern smartphones. iCleaner's media management capabilities help you take control of your photo library without losing precious memories. The app identifies similar photos, detects blurry or low-quality images, finds screenshots you no longer need, and locates large video files that might be better stored elsewhere.</p>
+
+                <p>The AI phone cleaner component shines here, using machine learning to understand which photos are truly important to you. It can identify your best shots from burst photo sequences, detect duplicate images with slight variations, and even suggest which photos might be worth keeping based on factors like facial expressions, composition, and image quality. This intelligent approach to media management means you can free up substantial storage space without sacrificing the photos and videos that matter most.</p>
+
+                <h3>Email and Inbox Optimization</h3>
+                <p>Email clutter might not directly affect your phone's storage like photos do, but a cluttered inbox significantly impacts productivity and mental clarity. iCleaner's email cleaning feature helps you regain control of your digital correspondence. It identifies promotional emails, newsletters you never read, old emails with large attachments, and messages that no longer serve any purpose.</p>
+
+                <p>The smart filtering system learns from your behavior, understanding which emails are important and which can be safely archived or deleted. For users dealing with thousands of unread emails, this feature is transformative. iCleaner can help you achieve inbox zero without the overwhelming manual sorting that typically accompanies email cleanup efforts.</p>
+
+                <h2>Why iCleaner Outperforms Traditional Phone Cleaners</h2>
+                <p>The smartphone optimization market is crowded with apps promising to clean your phone and boost performance, but most fall short of delivering meaningful results. Many so-called phone cleaner apps are nothing more than glorified file browsers with minimal actual cleaning capability. Others use aggressive tactics that can actually harm your device's performance or compromise your privacy by selling your data to third parties.</p>
+
+                <p>iCleaner takes a fundamentally different approach. Built from the ground up with user privacy and genuine performance improvement as core priorities, the app never collects or shares personal data. Every scanning and cleaning operation happens locally on your device, ensuring that your private information never leaves your phone. This privacy-first philosophy extends to every feature, from the secure vault to the email cleaner.</p>
+
+                <h3>AI-Powered Intelligence That Learns</h3>
+                <p>The artificial intelligence component of iCleaner isn't just marketing speak; it's the engine that powers truly intelligent cleanup decisions. The AI phone cleaner functionality continuously learns from your behavior and preferences. Over time, it becomes better at identifying which files you're likely to need and which ones can be safely removed. This personalized approach means that iCleaner becomes more effective the longer you use it.</p>
+
+                <p>For iPhone users particularly, where iOS imposes strict limitations on what apps can access and modify, iCleaner's iPhone cleanup capabilities work within the system's constraints to deliver maximum results. The app leverages iOS's built-in optimization APIs while providing a user-friendly interface that makes complex cleanup tasks simple and intuitive.</p>
+
+                <h3>Cross-Platform Consistency</h3>
+                <p>Whether you're using an Android phone or an iPhone, iCleaner provides a consistent experience optimized for each platform's unique characteristics. Android users benefit from deeper system access that allows more comprehensive cleaning, while iOS users get an experience that works seamlessly within Apple's ecosystem. The development team maintains feature parity between platforms while respecting the design philosophies and technical requirements of each operating system.</p>
+
+                <div class="highlight">
+                    <h3>Real Results from Real Users</h3>
+                    <p>Users consistently report significant improvements after using iCleaner. Average storage recovery ranges from 3GB to 8GB on the first use, with some users freeing up over 15GB on heavily cluttered devices. Performance improvements are equally impressive, with users noting faster app launches, smoother multitasking, and improved battery life as a result of reduced background processes working with fragmented storage.</p>
+                </div>
+
+                <h2>Advanced Features for Power Users</h2>
+
+                <h3>Intelligent Duplicate Detection</h3>
+                <p>Duplicate files are silent storage killers. You might have the same photo saved in multiple folders, documents downloaded several times, or apps that create backup copies you didn't know existed. iCleaner's duplicate finder uses advanced algorithms to identify not just exact duplicates but also similar files that might have minor differences.</p>
+
+                <p>This similarity detection is particularly powerful for photos. If you've taken multiple shots of the same scene or have edited versions of images alongside originals, iCleaner can identify these relationships and help you decide which versions to keep. The visual interface makes reviewing duplicates quick and painless, with side-by-side comparisons that make decision-making straightforward.</p>
+
+                <h3>Browser and Ad Cache Management</h3>
+                <p>Web browsers accumulate enormous amounts of cache data, cookies, and tracking information. While some cache improves browsing speed, excessive browser data slows down your device and compromises privacy. iCleaner's browser cleanup feature provides granular control over what gets removed, allowing you to clear ad cache and tracking data while preserving login information and website preferences you want to keep.</p>
+
+                <p>For users concerned about privacy, this feature is invaluable. Regular browser cleanup with iCleaner reduces the digital footprint that advertisers and trackers use to monitor your online behavior. Combined with the secure vault for sensitive browsing data, iCleaner becomes a comprehensive privacy tool.</p>
+
+                <h3>Video and Photo Compression</h3>
+                <p>Modern smartphones capture incredibly high-quality photos and videos, but this quality comes at the cost of massive file sizes. A single 4K video can consume hundreds of megabytes or even gigabytes of storage. iCleaner's compression tools use advanced algorithms to reduce file sizes significantly while maintaining visual quality that's indistinguishable from the original in most viewing scenarios.</p>
+
+                <p>The compression feature is smart enough to analyze each file and apply appropriate compression levels. Photos are compressed using techniques that preserve important details while removing redundant data. Videos can be transcoded to more efficient formats that maintain quality while dramatically reducing file size. For users who share photos and videos frequently, this feature also speeds up upload and sending times.</p>
+
+                <h2>Getting Started with iCleaner</h2>
+                <p>Using iCleaner is remarkably simple, even for users who aren't technically inclined. After downloading and installing the app from your platform's app store, the initial setup takes less than two minutes. The app requests only the permissions necessary to perform its functions, and each permission comes with a clear explanation of why it's needed.</p>
+
+                <p>The first scan is always the most revealing. iCleaner performs a comprehensive analysis of your device, identifying all the areas where storage can be recovered and performance can be improved. The results are presented in an easy-to-understand dashboard that breaks down exactly what was found and how much space can be recovered in each category.</p>
+
+                <p>From there, you have complete control. iCleaner provides recommendations, but you make the final decisions about what gets cleaned and what stays. For users who want a hands-off approach, the app offers a one-tap optimization feature that automatically cleans safe-to-remove items based on best practices and AI analysis.</p>
+
+                <h3>Maintenance Made Easy</h3>
+                <p>The real power of iCleaner comes from regular use. While a single cleanup session delivers impressive results, maintaining a clean phone requires ongoing attention. iCleaner makes this effortless with scheduled cleaning options, smart notifications that alert you when junk accumulation reaches concerning levels, and quick cleanup widgets that let you perform essential maintenance tasks without even opening the app.</p>
+
+                <p>Many users make iCleaner part of their weekly routine, spending just a few minutes reviewing what the app has identified and approving cleanup operations. This proactive approach prevents the gradual performance degradation that affects phones over time, keeping your device running like new even after years of use.</p>
+
+                <h2>Join Millions of Satisfied Users</h2>
+                <p>iCleaner has helped millions of users reclaim their phone's performance and storage. The app maintains a stellar rating across both the Google Play Store and Apple App Store, with users praising its effectiveness, ease of use, and commitment to privacy. Regular updates ensure that iCleaner stays compatible with the latest operating system versions and continues to improve its cleaning capabilities.</p>
+
+                <p>The development team behind iCleaner is committed to ongoing innovation. New features are regularly added based on user feedback and emerging smartphone usage patterns. Recent updates have introduced enhanced AI capabilities, improved compression algorithms, and expanded compatibility with the latest device models from major manufacturers.</p>
+
+                <div class="highlight">
+                    <h3>Download iCleaner Today</h3>
+                    <p>Experience the difference that a truly intelligent phone cleaner can make. Download iCleaner now and discover how much faster, more responsive, and more organized your phone can be. Whether you're dealing with an Android device that's become sluggish or an iPhone that's constantly running out of storage, iCleaner has the solution.</p>
+                    <p>The app is free to download and includes all core cleaning features. Premium options are available for users who want advanced capabilities like unlimited vault storage, priority customer support, and exclusive AI-powered optimization features.</p>
+                </div>
+
+                <p>Your phone is one of your most important tools. Don't let cluttered storage and accumulated junk prevent it from performing at its best. Join the iCleaner community today and rediscover how good your phone can feel. With intelligent cleaning, robust security, and a commitment to your privacy, iCleaner is the only phone optimization app you'll ever need.</p>
+
+                <p>For support, questions, or feedback, our team is always ready to help. Contact us at <a href="mailto:phone.icleaner@gmail.com" style="color: #667eea; text-decoration: none; font-weight: 600;">phone.icleaner@gmail.com</a> and experience the exceptional customer service that iCleaner users have come to expect. We're here to ensure your phone cleaning experience is smooth, effective, and satisfying.</p>
+            </div>
+        </section>
+
+        <div class="stats-section">
+            <h2 class="stats-title">iCleaner by the Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label">Active Users</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5.2GB</div>
+                    <div class="stat-label">Average Space Saved</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.8★</div>
+                    <div class="stat-label">User Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">150M+</div>
+                    <div class="stat-label">Files Cleaned</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="comparison-section">
+            <h2 class="comparison-title">iCleaner vs. Other Phone Cleaners</h2>
+            <p class="comparison-subtitle">See why users choose iCleaner over competing phone cleaning apps</p>
+            
+            <div class="comparison-table">
+                <div class="comparison-row">
+                    <div>Feature</div>
+                    <div>iCleaner</div>
+                    <div>Others</div>
+                </div>
+                <div class="comparison-row">
+                    <div>AI-Powered Cleaning</div>
+                    <div><span class="checkmark">✓</span></div>
+                    <div><span class="
