@@ -392,6 +392,79 @@
             color: #718096;
         }
 
+        .download-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .download-content {
+            text-align: center;
+        }
+
+        .download-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .download-subtitle {
+            font-size: 18px;
+            color: white;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: white;
+            color: #1a1a1a;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-icon {
+            font-size: 36px;
+        }
+
+        .btn-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .btn-label {
+            font-size: 12px;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        .btn-store {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
         @media (max-width: 768px) {
             .header-title {
                 font-size: 32px;
@@ -436,6 +509,24 @@
             .stats-section {
                 padding: 50px 20px;
             }
+
+            .download-title {
+                font-size: 24px;
+            }
+
+            .download-subtitle {
+                font-size: 16px;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .download-btn {
+                width: 100%;
+                max-width: 280px;
+            }
         }
     </style>
 </head>
@@ -453,6 +544,31 @@
             <a href="terms-of-service.html" class="nav-link">Terms & Conditions</a>
         </div>
     </nav>
+
+    <div class="download-banner">
+        <div class="container">
+            <div class="download-content">
+                <h2 class="download-title">Download iCleaner Now</h2>
+                <p class="download-subtitle">Available for free on Android and iOS</p>
+                <div class="download-buttons">
+                    <a href="#" class="download-btn android-btn" id="android-download">
+                        <span class="btn-icon">📱</span>
+                        <div class="btn-text">
+                            <span class="btn-label">Get it on</span>
+                            <span class="btn-store">Google Play</span>
+                        </div>
+                    </a>
+                    <a href="#" class="download-btn ios-btn" id="ios-download">
+                        <span class="btn-icon">🍎</span>
+                        <div class="btn-text">
+                            <span class="btn-label">Download on the</span>
+                            <span class="btn-store">App Store</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <section class="content-section" id="home">
