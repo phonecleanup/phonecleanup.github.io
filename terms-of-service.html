@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for iCleaner - Read our terms and conditions for using the iCleaner phone optimization app.">
+    <title>Terms of Service - iCleaner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #f5f7fa;
+        }
+
+        .top-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .top-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: drift 20s linear infinite;
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .header-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-title {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        .header-subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            padding: 20px 0;
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .content-section {
+            background: white;
+            margin: 40px auto;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 16px;
+            color: #2d3748;
+        }
+
+        p {
+            font-size: 17px;
+            margin-bottom: 18px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            font-size: 17px;
+            color: #4a5568;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            margin: 30px 0;
+        }
+
+        .warning-box {
+            background: rgba(245, 101, 101, 0.1);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #f56565;
+            margin: 30px 0;
+        }
+
+        .update-date {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background: #1a202c;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #a0aec0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .footer-section a:hover {
+            color: #667eea;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #2d3748;
+            color: #718096;
+        }
+
+        strong {
+            color: #2d3748;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 32px;
+            }
+
+            .header-subtitle {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            .content-section {
+                padding: 40px 20px;
+                margin: 20px 10px;
+            }
+
+            .nav-container {
+                gap: 20px;
+            }
+
+            .nav-link {
+                padding: 15px 0;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-header">
+        <div class="header-icon">📜</div>
+        <h1 class="header-title">Terms of Service</h1>
+        <p class="header-subtitle">Please read these terms carefully before using iCleaner.</p>
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+            <a href="terms-of-service.html" class="nav-link active">Terms & Conditions</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="content-section">
+            <div class="content-wrapper">
+                <span class="update-date">Last Updated: October 21, 2025</span>
+
+                <h1>iCleaner Terms of Service</h1>
+                
+                <p>Welcome to iCleaner! These Terms of Service ("Terms," "Agreement") govern your access to and use of the iCleaner mobile application ("App," "Service," "iCleaner") provided by iCleaner ("we," "us," "our"). By downloading, installing, accessing, or using iCleaner, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the App.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Important:</strong> Please read these Terms carefully. They contain important information about your legal rights, remedies, and obligations, including mandatory arbitration and class action waiver provisions.</p>
+                </div>
+
+                <h2>1. Acceptance of Terms</h2>
+                
+                <p>By creating an account, accessing, or using iCleaner on Android or iOS devices, you acknowledge that:</p>
+                <ul>
+                    <li>You have read, understood, and agree to be bound by these Terms</li>
+                    <li>You have read and agree to our Privacy Policy, which is incorporated into these Terms by reference</li>
+                    <li>You are at least 13 years of age (or the minimum age in your jurisdiction)</li>
+                    <li>You have the legal capacity to enter into this binding agreement</li>
+                    <li>If using the App on behalf of an organization, you have authority to bind that organization to these Terms</li>
+                </ul>
+
+                <p>These Terms apply to all users of the App, including free users and premium subscribers.</p>
+
+                <h2>2. Description of Service</h2>
+
+                <p>iCleaner is a mobile phone optimization application that provides the following features and services:</p>
+
+                <h3>2.1 Core Features (Free)</h3>
+                <ul>
+                    <li><strong>Junk File Cleaning:</strong> Scan and remove cache files, temporary files, residual files, and unnecessary system files</li>
+                    <li><strong>Storage Analysis:</strong> Analyze device storage usage and provide recommendations for optimization</li>
+                    <li><strong>Duplicate File Detection:</strong> Identify and remove duplicate photos, videos, and documents</li>
+                    <li><strong>Contact Cleanup:</strong> Merge duplicate contacts and remove empty or incomplete contact entries</li>
+                    <li><strong>Media Management:</strong> Organize photos and videos, identify blurry or low-quality images</li>
+                    <li><strong>Basic Secure Vault:</strong> Store limited private files with password/biometric protection</li>
+                    <li><strong>Email Inbox Cleaner:</strong> Identify and help remove unnecessary emails and attachments</li>
+                </ul>
+
+                <h3>2.2 Premium Features (Subscription Required)</h3>
+                <ul>
+                    <li>Unlimited secure vault storage</li>
+                    <li>Advanced file compression tools</li>
+                    <li>Cloud backup for vault files</li>
+                    <li>Priority customer support</li>
+                    <li>Ad-free experience</li>
+                    <li>Advanced AI-powered cleaning recommendations</li>
+                    <li>Automatic scheduled cleaning</li>
+                    <li>Browser and ad cache cleanup</li>
+                </ul>
+
+                <p>We reserve the right to modify, suspend, or discontinue any feature of the Service at any time, with or without notice.</p>
+
+                <h2>3. User Accounts and Registration</h2>
+
+                <h3>3.1 Account Creation</h3>
+                <p>While basic features may be available without registration, certain features require you to create an account. When creating an account, you agree to:</p>
+                <ul>
+                    <li>Provide accurate, current, and complete information</li>
+                    <li>Maintain and promptly update your account information</li>
+                    <li>Keep your password secure and confidential</li>
+                    <li>Notify us immediately of any unauthorized use of your account</li>
+                    <li>Accept responsibility for all activities under your account</li>
+                </ul>
+
+                <h3>3.2 Account Security</h3>
+                <p>You are solely responsible for maintaining the confidentiality of your account credentials. You agree to immediately notify us of any unauthorized access or security breach. We are not liable for any loss or damage arising from your failure to protect your account information.</p>
+
+                <h3>3.3 Account Termination</h3>
+                <p>You may delete your account at any time through the App settings. Upon account deletion:</p>
+                <ul>
+                    <li>Your account information will be permanently deleted within 30 days</li>
+                    <li>Active subscriptions will continue until the end of the billing period</li>
+                    <li>Local data on your device will remain until you uninstall the App</li>
+                    <li>Vault files will be permanently deleted unless backed up externally</li>
+                </ul>
+
+                <h2>4. User Responsibilities and Acceptable Use</h2>
+
+                <h3>4.1 Permitted Use</h3>
+                <p>You may use iCleaner for personal, non-commercial purposes to optimize and maintain your mobile device. You agree to use the Service in compliance with all applicable laws and regulations.</p>
+
+                <h3>4.2 Prohibited Activities</h3>
+                <p>You agree NOT to:</p>
+                <ul>
+                    <li>Use the App for any illegal, fraudulent, or unauthorized purpose</li>
+                    <li>Attempt to reverse engineer, decompile, or disassemble the App</li>
+                    <li>Remove, circumvent, or disable any security features or protections</li>
+                    <li>Use automated systems (bots, scrapers) to access the Service</li>
+                    <li>Interfere with or disrupt the App's functionality or servers</li>
+                    <li>Upload malicious code, viruses, or harmful content</li>
+                    <li>Violate any applicable laws or third-party rights</li>
+                    <li>Attempt to gain unauthorized access to other users' accounts or data</li>
+                    <li>Use the App to store or transmit illegal content</li>
+                    <li>Sell, rent, lease, or redistribute the App without authorization</li>
+                    <li>Create derivative works based on the App</li>
+                    <li>Use the App in a manner that could damage our reputation</li>
+                </ul>
+
+                <h3>4.3 Vault Content Responsibility</h3>
+                <p>You are solely responsible for the content you store in the secure vault. You represent and warrant that:</p>
+                <ul>
+                    <li>You own or have the right to store all vault content</li>
+                    <li>Vault content does not violate any laws or third-party rights</li>
+                    <li>Vault content does not contain illegal material, including child exploitation content</li>
+                    <li>You will not use the vault to store or distribute unlawful content</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Zero Tolerance Policy:</strong> We have zero tolerance for illegal content. Any illegal use of the vault or App will result in immediate account termination and reporting to law enforcement authorities.</p>
+                </div>
+
+                <h2>5. Subscriptions and Payments</h2>
+
+                <h3>5.1 Premium Subscription</h3>
+                <p>iCleaner offers premium subscriptions with enhanced features. Subscription options include:</p>
+                <ul>
+                    <li>Monthly subscription</li>
+                    <li>Annual subscription (discounted rate)</li>
+                    <li>Lifetime purchase (one-time payment)</li>
+                </ul>
+
+                <h3>5.2 Billing and Payment</h3>
+                <p>Subscriptions are billed through your Apple App Store or Google Play Store account. By subscribing, you agree that:</p>
+                <ul>
+                    <li>Payment will be charged to your App Store/Play Store account at confirmation of purchase</li>
+                    <li>Subscriptions automatically renew unless auto-renewal is disabled at least 24 hours before the end of the current period</li>
+                    <li>Your account will be charged for renewal within 24 hours prior to the end of the current period</li>
+                    <li>You can manage subscriptions and disable auto-renewal in your device's account settings</li>
+                    <li>Prices are subject to change with notice provided before renewal</li>
+                </ul>
+
+                <h3>5.3 Free Trials</h3>
+                <p>We may offer free trial periods for premium features. At the end of the trial period, you will be automatically charged the subscription fee unless you cancel before the trial ends. Trial eligibility is determined at our discretion and is typically limited to one trial per user.</p>
+
+                <h3>5.4 Refund Policy</h3>
+                <p>All purchases are processed through the Apple App Store or Google Play Store. Refund requests must be directed to Apple or Google according to their respective refund policies:</p>
+                <ul>
+                    <li><strong>Apple App Store:</strong> Visit reportaproblem.apple.com</li>
+                    <li><strong>Google Play Store:</strong> Visit support.google.com/googleplay</li>
+                </ul>
+
+                <p>We do not process refunds directly. In exceptional circumstances, contact us at phone.icleaner@gmail.com and we may assist with refund requests on a case-by-case basis.</p>
+
+                <h3>5.5 Cancellation</h3>
+                <p>You may cancel your subscription at any time. Upon cancellation:</p>
+                <ul>
+                    <li>You will retain premium access until the end of the current billing period</li>
+                    <li>No refund will be provided for the remaining portion of the billing period</li>
+                    <li>Your account will revert to the free version when the subscription expires</li>
+                    <li>Premium features will become unavailable</li>
+                </ul>
+
+                <h2>6. Intellectual Property Rights</h2>
+
+                <h3>6.1 Our Intellectual Property</h3>
+                <p>iCleaner, including all content, features, functionality, source code, algorithms, user interface, graphics, logos, and trademarks, is owned by us and protected by international copyright, trademark, and other intellectual property laws. You acknowledge that:</p>
+                <ul>
+                    <li>The App is licensed to you, not sold</li>
+                    <li>We retain all rights, title, and interest in the App</li>
+                    <li>You do not acquire any ownership rights through use of the App</li>
+                    <li>All trademarks, service marks, and logos are our property</li>
+                </ul>
+
+                <h3>6.2 Limited License</h3>
+                <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to:</p>
+                <ul>
+                    <li>Download and install the App on your personal devices</li>
+                    <li>Use the App for personal, non-commercial purposes</li>
+                    <li>Access and use features in accordance with these Terms</li>
+                </ul>
+
+                <p>This license automatically terminates if you violate these Terms.</p>
+
+                <h3>6.3 Your Content</h3>
+                <p>You retain ownership of all files, photos, videos, and content you store in iCleaner. By using the App, you grant us a limited license to:</p>
+                <ul>
+                    <li>Store your content locally on your device</li>
+                    <li>Process your content to provide App functionality (cleaning, compression, analysis)</li>
+                    <li>Back up encrypted vault content to cloud storage (if you enable this feature)</li>
+                </ul>
+
+                <p>We do not claim ownership of your content and will not use it for any purpose other than providing the Service.</p>
+
+                <h2>7. Data Backup and Loss</h2>
+
+                <h3>7.1 Your Responsibility to Backup</h3>
+                <p>You are solely responsible for backing up important files before using cleaning features. While iCleaner is designed to safely identify and remove only unnecessary files, we strongly recommend:</p>
+                <ul>
+                    <li>Creating backups of important data before using the App</li>
+                    <li>Reviewing files before confirming deletion</li>
+                    <li>Using the vault feature for critical files</li>
+                    <li>Maintaining external backups of irreplaceable content</li>
+                </ul>
+
+                <h3>7.2 No Liability for Data Loss</h3>
+                <p>To the maximum extent permitted by law, we are not liable for any data loss, corruption, or damage that may occur from:</p>
+                <ul>
+                    <li>Using the App's cleaning or optimization features</li>
+                    <li>Accidental deletion of files</li>
+                    <li>Device malfunction or software errors</li>
+                    <li>Failure to backup data</li>
+                    <li>Third-party interference or security breaches</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Important Warning:</strong> While iCleaner uses advanced algorithms to identify safe-to-delete files, no automated system is perfect. Always review files before deletion and maintain external backups of important data. You use the App at your own risk.</p>
+                </div>
+
+                <h2>8. Third-Party Services and Links</h2>
+
+                <p>iCleaner may contain links to third-party websites, apps, or services. We do not control, endorse, or assume responsibility for any third-party content or services. Your use of third-party services is governed by their respective terms and privacy policies. We are not liable for any damages or losses caused by third-party services.</p>
+
+                <h2>9. Disclaimers and Warranties</h2>
+
+                <h3>9.1 "As Is" Provision</h3>
+                <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO:</p>
+                <ul>
+                    <li>Warranties of merchantability, fitness for a particular purpose, and non-infringement</li>
+                    <li>Warranties that the App will be error-free, uninterrupted, or secure</li>
+                    <li>Warranties regarding the accuracy, reliability, or completeness of content</li>
+                    <li>Warranties that defects will be corrected</li>
+                </ul>
+
+                <h3>9.2 Performance Disclaimer</h3>
+                <p>We do not guarantee that iCleaner will:</p>
+                <ul>
+                    <li>Improve your device performance by any specific amount</li>
+                    <li>Free up any specific amount of storage space</li>
+                    <li>Resolve all device issues or problems</li>
+                    <li>Be compatible with all devices, operating systems, or configurations</li>
+                    <li>Meet your specific requirements or expectations</li>
+                </ul>
+
+                <p>Results may vary based on device condition, usage patterns, and other factors beyond our control.</p>
+
+                <h3>9.3 No Professional Advice</h3>
+                <p>iCleaner provides automated recommendations and analysis tools but does not provide professional advice. The App's recommendations should not be considered professional technical advice. You should exercise your own judgment when using the App's features.</p>
+
+                <h2>10. Limitation of Liability</h2>
+
+                <h3>10.1 Liability Limitations</h3>
+                <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL ICLEANER, ITS AFFILIATES, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR:</p>
+                <ul>
+                    <li>Indirect, incidental, consequential, punitive, or special damages</li>
+                    <li>Lost profits, revenue, data, or business opportunities</li>
+                    <li>Device damage or malfunction</li>
+                    <li>Data loss or corruption</li>
+                    <li>Personal injury or property damage</li>
+                    <li>Any damages arising from use or inability to use the App</li>
+                </ul>
+
+                <h3>10.2 Maximum Liability</h3>
+                <p>Our total liability to you for any claims arising from your use of iCleaner shall not exceed the amount you paid to us in the twelve (12) months preceding the claim, or $100 USD, whichever is greater.</p>
+
+                <h3>10.3 Essential Purpose</h3>
+                <p>Some jurisdictions do not allow limitation of liability for certain damages. If your jurisdiction does not allow such limitations, the above limitations may not apply to you, but our liability shall be limited to the fullest extent permitted by applicable law.</p>
+
+                <h2>11. Indemnification</h2>
+
+                <p>You agree to indemnify, defend, and hold harmless iCleaner, its affiliates, officers, directors, employees, agents, and licensors from and against any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising from:</p>
+                <ul>
+                    <li>Your use or misuse of the App</li>
+                    <li>Your violation of these Terms</li>
+                    <li>Your violation of any third-party rights</li>
+                    <li>Your violation of applicable laws or regulations</li>
+                    <li>Content you store in the vault or process through the App</li>
+                    <li>Your negligent or willful misconduct</li>
+                </ul>
+
+                <h2>12. Modifications to Terms and Service</h2>
+
+                <h3>12.1 Changes to Terms</h3>
+                <p>We reserve the right to modify these Terms at any time. When we make changes, we will:</p>
+                <ul>
+                    <li>Update the "Last Updated" date at the top of these Terms</li>
+                    <li>Notify you through the App or via email for material changes</li>
+                    <li>Provide reasonable time to review changes before they take effect</li>
+                </ul>
+
+                <p>Your continued use of iCleaner after changes are posted constitutes acceptance of the updated Terms. If you do not agree to the updated Terms, you must stop using the App and may delete your account.</p>
+
+                <h3>12.2 Changes to Service</h3>
+                <p>We may modify, suspend, or discontinue any feature of the Service at any time, with or without notice. We are not liable to you or any third party for any modification, suspension, or discontinuation of the Service.</p>
+
+                <h2>13. Termination</h2>
+
+                <h3>13.1 Termination by You</h3>
+                <p>You may terminate these Terms at any time by:</p>
+                <ul>
+                    <li>Uninstalling the App from your device</li>
+                    <li>Deleting your account through App settings</li>
+                    <li>Ceasing all use of the Service</li>
+                </ul>
+
+                <h3>13.2 Termination by Us</h3>
+                <p>We may suspend or terminate your access to the App immediately, without prior notice or liability, if you:</p>
+                <ul>
+                    <li>Violate these Terms or our policies</li>
+                    <li>Engage in fraudulent or illegal activities</li>
+                    <li>Threaten the security or integrity of the Service</li>
+                    <li>Violate the rights of other users or third parties</li>
+                    <li>Fail to pay subscription fees (for premium users)</li>
+                </ul>
+
+                <h3>13.3 Effects of Termination</h3>
+                <p>Upon termination of your account:</p>
+                <ul>
+                    <li>Your right to use the App immediately ceases</li>
+                    <li>Your account data will be deleted according to our retention policies</li>
+                    <li>You will lose access to premium features (if applicable)</li>
+                    <li>No refunds will be provided for unused subscription periods</li>
+                    <li>Provisions intended to survive termination shall remain in effect</li>
+                </ul>
+
+                <h2>14. Dispute Resolution and Arbitration</h2>
+
+                <h3>14.1 Informal Dispute Resolution</h3>
+                <p>Before filing a claim, you agree to contact us at phone.icleaner@gmail.com to attempt to resolve the dispute informally. We will attempt to resolve the dispute within 60 days of receiving your notice.</p>
+
+                <h3>14.2 Binding Arbitration</h3>
+                <p>If we cannot resolve a dispute informally, any controversy or claim arising out of or relating to these Terms shall be settled by binding arbitration in accordance with the rules of a recognized arbitration association. Arbitration will take place in a neutral location or online as agreed by the parties.</p>
+
+                <h3>14.3 Class Action Waiver</h3>
+                <p>YOU AND ICLEANER AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING. You agree to waive any right to participate in class action lawsuits or class-wide arbitration.</p>
+
+                <h3>14.4 Exceptions</h3>
+                <p>Either party may bring a claim in small claims court if the claim qualifies. Additionally, either party may seek injunctive or other equitable relief in court to prevent the actual or threatened infringement, misappropriation, or violation of intellectual property rights.</p>
+
+                <h2>15. Governing Law and Jurisdiction</h2>
+
+                <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction where iCleaner operates, without regard to its conflict of law provisions. Any dispute not subject to arbitration shall be brought in the courts of competent jurisdiction in that location.</p>
+
+                <h2>16. General Provisions</h2>
+
+                <h3>16.1 Entire Agreement</h3>
+                <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and iCleaner regarding use of the App and supersede all prior agreements and understandings.</p>
+
+                <h3>16.2 Severability</h3>
+                <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect. The invalid provision shall be replaced with a valid provision that most closely approximates the intent of the original provision.</p>
+
+                <h3>16.3 Waiver</h3>
+                <p>Our failure to enforce any right or provision of these Terms shall not constitute a waiver of that right or provision. Any waiver must be in writing and signed by an authorized representative.</p>
+
+                <h3>16.4 Assignment
